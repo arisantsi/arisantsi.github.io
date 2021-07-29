@@ -1243,6 +1243,7 @@ h3, h1, h2 {
 }
 
 .anis_bot {
+  color: #009578;
   width: 100vw;
   height: 100vh;
   margin-left: auto;
@@ -1251,10 +1252,22 @@ h3, h1, h2 {
   top: 0;
   position: absolute;
 }
+.anis_bot input {
+  outline: none;
+}
 
 @media only screen and (max-width: 767px) {
   #oooaaa {
     display: none;
+  }
+
+  h1 {
+    font-size: 16px;
+  }
+
+  #enterr {
+    display: block;
+    z-index: 100000;
   }
 
   .chat {
@@ -1267,6 +1280,10 @@ h3, h1, h2 {
   }
 }
 @media only screen and (min-width: 768px) {
+  #enterr {
+    display: none;
+  }
+
   .chat {
     height: 300px;
     width: 50vw;
