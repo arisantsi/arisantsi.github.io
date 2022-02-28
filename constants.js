@@ -1,10 +1,12 @@
 // Options the user could type in
 var today = new Date();
 var time = today.getHours() + " lewat " + today.getMinutes() + " menit";
+var days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum at', 'Sabtu'];
+var dayName = days[today.getDay()];
 
 const prompts = [
   ["password", "lupa"],
-  ["sekarang hari apa?", "hari apa", "hari"],
+  ["sekarang hari apa?", "hari apa?", "hari"],
   ["quote", "motivasi", "alquran", "quran", "ayat", "ngaji"],
   ["hi", "halo", "selamat siang"],
   ["Anis", "anis", "halo anis"],
@@ -16,7 +18,7 @@ const prompts = [
 
 const replies = [
   ["Ulang tahun anis", "ulang tahun tisha", "19 12 94"],
-  ["Hari ini hari yang menyenangkan"],
+  [`Hari ini hari ${dayName}`]
   ["Apa kamu sedang cemas?"],
   ["iya, ada yang dapat kami bantu?"],
   ["Ya ada apa?", "Itu namaku, cantik bukan?", "Kamu jangan terlalu berharap, suamiku asruldev"],
@@ -28,9 +30,11 @@ const replies = [
 
 const alternative = [
   "Hu?",
+  "Gak jelas...",
   "Ya...",
   "Coba lagi",
-  "Ku mendengarkanmu..."
+  "Ku mendengarkanmu...",
+  "Maaf, kami tidak dapat mengerti perasaan anda..."
 ]
 
 // Whatever else you want :)
